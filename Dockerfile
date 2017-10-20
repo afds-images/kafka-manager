@@ -9,7 +9,7 @@ RUN apk add --no-cache curl unzip bash && \
     tar xfvz kafka-manager.tar.gz && \
     cd "kafka-manager-${KM_VERSION}" && \
     ./sbt clean dist && \
-    unzip  -d / ./target/universal/kafka-manager-${KM_VERSION}.zip && \
+    unzip -d / ./target/universal/kafka-manager-${KM_VERSION}.zip && \
     rm -rf /tmp/* /root/.sbt /root/.ivy2
 
 ADD start-kafka-manager.sh /kafka-manager-${KM_VERSION}/
